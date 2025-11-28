@@ -18,5 +18,5 @@ int main(){
 }
 
 int Dimension(char cad[]){
-    return strlen(cad);
+    return strlen(cad);  //funcion para obtener el largo de la cadena
 }
