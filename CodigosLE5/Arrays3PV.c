@@ -11,7 +11,7 @@ int main(){
     srand(time(NULL));
 
     for(i=0;i<TAMANO_VECTOR;i++){
-        vec[i]=10+rand()%11;
+        vec[i]=10+rand()%11;  //numero random entre 10 y 20
     }
 
     int rep = contarMayor(vec,TAMANO_VECTOR);
@@ -26,13 +26,14 @@ int contarMayor(int vec[],int n){
 
     for(i=1;i<n;i++){
         if(vec[i]>mayor){
-            mayor=vec[i];
+            mayor=vec[i];   //averigua el mayor
         }
     }
 
     for(i=0;i<n;i++){
-        if(vec[i]==mayor) cont++;
+        if(vec[i]==mayor) cont++;   //cuenta las veces que se repite el mayor
     }
 
     return cont;
 }
+
