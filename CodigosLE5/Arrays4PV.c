@@ -14,7 +14,7 @@ int main(){
 	srand(time(NULL));
 
 	for(i=0;i<TAM;i++){
-		vec[i]=10+rand()%31;
+		vec[i]=10+rand()%31;  //nro aleatorio entre 10 y 40
 	}
 
 	encontrarMaxMin(vec,&max,&min);
@@ -27,8 +27,8 @@ int main(){
 
 void encontrarMaxMin(int v[],int *max,int *min){
 	int i;
-	*max=v[0];
-	*min=v[0];
+	*max=v[0];    //el * es para averiguar la direccion de la variable y no recibir solo el valor
+	*min=v[0];    //asi podes devolver las 2 variables y no solo 1
 	for(i=1;i<TAM;i++){
 		if(v[i]>*max)*max=v[i];
 		if(v[i]<*min)*min=v[i];
@@ -43,4 +43,5 @@ void mostrarPosMax(int v[],int max){
 	}
 	printf("\n");
 }
+
 
